@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Contact from './Components/Contact';
+import FAQ from './Components/FAQ';
+import JobRegistrationForm from './Components/JobRegistrationForm';
+import NewsCard from './Components/NewsCard';
+import TodoList from './Components/TodoList';
+import DashboardPage from './Pages/DashboardPage';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
+import JobRegistrationPage from './Pages/JobRegistrationPage';
+import NewsPage from './Pages/NewsPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route exact path='/' element={<DashboardPage />} />
+        <Route exact path='/about' element={<AboutPage />} />
+        <Route exact path='/contact' element={<ContactPage />} />
+        <Route exact path='/job-registration' element={<JobRegistrationPage />} />
+        <Route exact path='/business-news' element={<NewsPage />} />
+    </Routes>
+
   );
 }
 
