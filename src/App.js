@@ -10,6 +10,7 @@ import ContactPage from './Pages/ContactPage';
 import JobRegistrationPage from './Pages/JobRegistrationPage';
 import NewsPage from './Pages/NewsPage';
 import Navigation from './Components/Navigation';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/contact' element={<ContactPage />} />
           <Route exact path='/jobs' element={<JobRegistrationPage />} />
           <Route exact path='/news' element={<NewsPage />} />
+          <Route path='*' element={<NotFound />} />
       </Routes>
     </>
 
