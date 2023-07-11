@@ -7,13 +7,13 @@ import FAQ from '../Components/FAQ'
 import FloatingButton from '../Components/FloatingButton'
 import ImageSlider from '../Components/ImageSlider'
 import StepperForm from '../Components/StepperForm'
+import GridComponent from '../Components/GridComponent'
+import Navigation from '../Components/Navigation'
 
 const DashboardPage = () => {
   return (
     <>
-        <ImageSlider />
-        <StepperForm />
-        <FloatingButton />
+       <GridComponent />
 
     </>
   )

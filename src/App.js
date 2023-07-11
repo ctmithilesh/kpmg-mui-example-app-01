@@ -9,16 +9,20 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import JobRegistrationPage from './Pages/JobRegistrationPage';
 import NewsPage from './Pages/NewsPage';
+import Navigation from './Components/Navigation';
 
 function App() {
   return (
-    <Routes>
-        <Route exact path='/' element={<DashboardPage />} />
-        <Route exact path='/about' element={<AboutPage />} />
-        <Route exact path='/contact' element={<ContactPage />} />
-        <Route exact path='/job-registration' element={<JobRegistrationPage />} />
-        <Route exact path='/business-news' element={<NewsPage />} />
-    </Routes>
+    <>
+      <Navigation />
+      <Routes>
+          <Route exact path='/' element={<DashboardPage />} />
+          <Route exact path='/about' element={<AboutPage />} />
+          <Route exact path='/contact' element={<ContactPage />} />
+          <Route exact path='/jobs' element={<JobRegistrationPage />} />
+          <Route exact path='/news' element={<NewsPage />} />
+      </Routes>
+    </>
 
   );
 }
